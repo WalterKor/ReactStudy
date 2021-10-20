@@ -1,4 +1,5 @@
 const path = require('path');
+const { versions } = require('process');
 const webpack = require('webpack');
 
 module.exports = {
@@ -16,12 +17,20 @@ module.exports = {
             test: /\.jsx?$/,
             loader: 'babel-loader',
             options:{
-                presets: ['@bable/preset-env', '@babel/preset-react'],
+                presets: [
+                    ['@bable/preset-env',{
+                        targets:{
+                            browsers: ['> 5% in KR', 'last 2 chrome versions' ]
+                        },
+                        debug: true,
+                    }], '@babel/preset-react'],
                 Plugins: [],
             }
         }]
     },
-
+    Plugins: [
+        new webpack.LoaderOptionsPlugin({debug: true})
+    ],
     output:{
         filename: 'app.js',
         path: path.join(__dirname, 'dist'),
