@@ -16,8 +16,6 @@ class App{
 
     }
 
-    
-
 
     setStatic(){
         this.app.use('/static', express.static('static'));
