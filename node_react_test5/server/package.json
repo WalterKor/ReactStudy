@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server"
+    "backend": "nodemon server",
+    "dev": "concurrently \"npm run backend\" \"npm run start --prefix client\""
   },
   "keywords": [],
   "author": "",
