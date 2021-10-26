@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const config = require('./config/key')
 
+
 class App{
     constructor(){
         this.app = express();
@@ -15,6 +16,14 @@ class App{
         this.setStatic();
         
         this.settingDB();
+
+        this.setMiddleWare();
+
+
+        /*error handling*/
+        // this.status404();
+        
+        // this.status500();
 
     }
 
@@ -32,6 +41,25 @@ class App{
             useNewUrlParser: true, useUnifiedTopology: true})
             .then(() => console.log('MongoDB Connected...'))
             .catch(err => console.log(err))          
+    }
+
+    setMiddleWare(){
+        this.app.use(logger('dev'));
+        this.app.use(bodyParser.json());
+        this.app.use(bodyParser.urlencoded({extended:false}));
+    }
+    
+    status404() {        
+        this.app.use((req , res, _ ) => {
+            res.status(404).render('/static/404.html')
+        });
+    }
+    
+    status500() {
+        this.app.use( (err, req, res,  _ ) => {
+            res.status(500).render('/static/500.html')
+        });
+    
     }
 
 }
