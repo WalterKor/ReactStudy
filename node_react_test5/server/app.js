@@ -1,8 +1,8 @@
 const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
-
-
+const mongoose = require('mongoose');
+const config = require('./config/key')
 
 class App{
     constructor(){
@@ -13,6 +13,8 @@ class App{
 
         //정적 디렉토리 추가
         this.setStatic();
+        
+        this.settingDB();
 
     }
 
@@ -23,6 +25,13 @@ class App{
 
     getRouting(){
         this.app.use(require('./controller'))
+    }
+
+    settingDB(){
+        mongoose.connect(config.mongoURI, {
+            useNewUrlParser: true, useUnifiedTopology: true})
+            .then(() => console.log('MongoDB Connected...'))
+            .catch(err => console.log(err))          
     }
 
 }
