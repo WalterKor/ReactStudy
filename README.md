@@ -13,9 +13,11 @@ npm install
 ## 업데이트 내역
 
 * 0.0.1
-    * Day1 (2021.10.18)
+    * 10/27 coding Angma class 추가
  
-## 정보
+## 정보, 자료출처
 nomarn__kor – [Insta](https://www.instagram.com/norman__kor/?hl=ko) 
 
-[https://github.com/okchanho](https://github.com/okchanho)
+[https://github.com/okchanho](https://github.com/okchanho),
+[코딩악마](https://www.youtube.com/channel/UCxft4RZ8lrK_BdPNz8NOP7Q)
+
