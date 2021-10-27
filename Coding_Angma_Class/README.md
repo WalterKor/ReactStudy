@@ -12,10 +12,8 @@ npm install
 
 ## 업데이트 내역
 
-* 0.0.1
-    * Day1 (2021.10.18)
+* 10/27
+    * Handling Events
  
 ## 정보
-nomarn__kor – [Insta](https://www.instagram.com/norman__kor/?hl=ko) 
-
-[https://github.com/okchanho](https://github.com/okchanho)
+[coding_angma](https://www.youtube.com/channel/UCxft4RZ8lrK_BdPNz8NOP7Q)
