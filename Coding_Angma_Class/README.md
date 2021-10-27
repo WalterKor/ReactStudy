@@ -14,6 +14,8 @@ npm install
 
 * 10/27
     * Handling Events
+    * state, useState
+    * props 
  
 ## 정보
 [coding_angma](https://www.youtube.com/channel/UCxft4RZ8lrK_BdPNz8NOP7Q)
