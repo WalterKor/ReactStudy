@@ -1,12 +1,12 @@
 {
-  "name": "server",
+  "name": "node_react_test6",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "backend": "nodemon server",
-    "client" : "cd.. cd client npm run start",
     "dev": "concurrently \"npm run backend\" \"npm run start --prefix client\""
+
   },
   "keywords": [],
   "author": "",
