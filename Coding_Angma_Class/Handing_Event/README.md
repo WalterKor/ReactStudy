@@ -1,19 +1,35 @@
-# Coding_ANGMA React Class
-> 코딩악마 React Class
-> 해당 웹페이지에서 확인하세요.
+## React JS #6 이벤트 처리(Handling Events)
 
-![](../header.png)
+```javascript
+import React from 'react'
 
-## 설치 방법
+function Hello() {
+    function showName() {
+        console.log('Mike');
+    }
 
-```sh
-npm install
+    function showAge(age) {
+        console.log(age);
+    }
+
+    function showText(e) {
+        console.log(e.target.value);
+    }
+    
+    return (
+        <div>
+            <h1>Hello</h1>
+            <button onClick={showName}>Show Name</button>
+            <button onClick={()=>{
+                showAge(10);
+            }}>Show Age</button>
+
+            <input type="text" onChange={showText}/>
+
+        </div>
+    )
+}
+
+export default Hello
+
 ```
-
-## 업데이트 내역
-
-* 10/27
-    * Handling Events
- 
-## 정보
-[coding_angma](https://www.youtube.com/channel/UCxft4RZ8lrK_BdPNz8NOP7Q)
