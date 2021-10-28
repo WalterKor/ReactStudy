@@ -17,6 +17,11 @@ npm install
     * state, useState
     * props 
     * 더미 데이터 구현, map()반복문 
+
+* 10/28
+    * react-router-dom
+    * json-server, REST API
+    * useEffect, fetch()    
     
  
 ## 정보
