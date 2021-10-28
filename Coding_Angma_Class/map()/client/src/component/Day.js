@@ -1,7 +1,3 @@
-## React JS #9 더미 데이터 구현, map() 반복문
-### Day.js Component
-
-```javascript
 import React from 'react'
 import dummy from '../db/data.json'
 
@@ -28,6 +24,3 @@ function Day() {
 }
 
 export default Day
-
-
-```

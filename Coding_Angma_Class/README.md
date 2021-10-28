@@ -16,6 +16,8 @@ npm install
     * Handling Events
     * state, useState
     * props 
+    * 더미 데이터 구현, map()반복문 
+    
  
 ## 정보
 [coding_angma](https://www.youtube.com/channel/UCxft4RZ8lrK_BdPNz8NOP7Q)
