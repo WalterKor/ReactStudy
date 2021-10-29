@@ -1,5 +1,4 @@
-import { Layout, Menu, Breadcrumb } from 'antd';
-import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
+import { Layout, Menu } from 'antd';
 import {
   BrowserRouter as Router,
   Link,
@@ -8,8 +7,7 @@ import {
 import Home from './component/home/Home';
 import Info from './component/Info/Info';
 import End from './component/End/End';
-const { SubMenu } = Menu;
-const { Header, Content, Footer, Sider } = Layout;
+const { Header, Footer} = Layout;
 
 function App() {
   return (
