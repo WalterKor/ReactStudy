@@ -1,8 +1,7 @@
 # ReactStudy
 > React를 혼자 공부해보고 여러방법을 적용한 소스저장소
-> 해당 웹페이지에서 확인하세요.
+> Project폴더를 확인하면 빠르게 확인 가능합니다.:tw-1f600: 
 
-![](../header.png)
 
 ## 설치 방법
 
@@ -14,10 +13,8 @@ npm install
 
 * 0.0.1
     * 10/27 coding Angma class 추가
+	* 10/28 Project Folder 추가, GHIBLI Project Start
  
-## 정보, 자료출처
-nomarn__kor – [Insta](https://www.instagram.com/norman__kor/?hl=ko) 
-
-[https://github.com/okchanho](https://github.com/okchanho),
-[코딩악마](https://www.youtube.com/channel/UCxft4RZ8lrK_BdPNz8NOP7Q)
-
+## contect me:tw-1f60a:
+insta - [nomarn__kor](https://www.instagram.com/norman__kor/?hl=ko) ,
+github - [Walter](https://github.com/okchanho)

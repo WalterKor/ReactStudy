@@ -7,17 +7,18 @@ function DayList() {
     const [days, setDays] = useState([]);
     const [count, setCount] = useState(0);
 
-    function onClick() {
-        setCount(count + 1)
-    }
 
     useEffect(()=>{
-        console.log('Count Change')
-    });
+        fetch('http://localhost:3001/days')
+        .then(res =>{
+            return res.json();
+        })
+        .then(data =>{
+            setDays(data);
+        })
+    },[]);
 
     /*랜더링되고 난 이후 작동*/
-
-
 
     return (
         <div>
@@ -28,7 +29,7 @@ function DayList() {
                     </li>
                 ))}
             </ul>  
-            <button onClick={onClick}>{count}</button>                        
+            
         </div>
     )
 }
