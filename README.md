@@ -14,6 +14,6 @@ npm install
     * 10/27 coding Angma class 추가
 	* 10/28 Project Folder 추가, GHIBLI Project Start
  
-## contect me:tw-1f60a:
+## contect me😁
 insta - [nomarn__kor](https://www.instagram.com/norman__kor/?hl=ko) ,
 github - [Walter](https://github.com/okchanho)
