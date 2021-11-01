@@ -7,6 +7,7 @@ import {
 import Home from './component/home/Home';
 import Info from './component/Info/Info';
 import End from './component/End/End';
+import FooterContent from './component/home/FooterContent';
 const { Header, Footer} = Layout;
 
 function App() {
@@ -25,7 +26,9 @@ function App() {
         <Route exact path = "/info" component={Info}/>
         <Route exact path = "/end" component={End}/>
       </Router>
-      <Footer style={{ textAlign: 'center' }}>humanity engineering ©2021 Created by Walter</Footer>
+      <Footer style={{ textAlign: 'center' }}>
+        <FooterContent/>
+      </Footer>
   </Layout>
   );
 }
