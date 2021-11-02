@@ -7,15 +7,23 @@ function DayList() {
     const [days, setDays] = useState([]);
     const [count, setCount] = useState(0);
 
+    function onClick() {
+        setCount(count + 1);        
+    }    
 
+    function onClick2() {
+        setDays([
+            ...days,
+            {
+                id: Math.random(),
+                day : 1
+            }
+        ]);        
+    }    
+
+    /*useEffect 렌더링이 다 끝난 직후*/
     useEffect(()=>{
-        fetch('http://localhost:3001/days')
-        .then(res =>{
-            return res.json();
-        })
-        .then(data =>{
-            setDays(data);
-        })
+        console.log("Count Change!!")
     },[]);
 
     /*랜더링되고 난 이후 작동*/
@@ -27,9 +35,10 @@ function DayList() {
                     <li key={day.id}>
                         <Link to = {`/day/${day.day}`}>Day {day.day}</Link>
                     </li>
-                ))}
-            </ul>  
-            
+                ))}            
+            </ul>
+            <button onClick={onClick}>{count}</button>              
+            <button onClick={onClick2}>DayChange</button>              
         </div>
     )
 }
