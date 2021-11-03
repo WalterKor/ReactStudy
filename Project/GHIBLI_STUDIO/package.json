@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "backend": "nodemon server",
+    "backend": "nodemon server/server.js",
+    "frontend": "npm run start --prefix client",
     "dev": "concurrently \"npm run backend\" \"npm run start --prefix client\""
   },
   "keywords": [],
-  "author": "",
+  "author": "WalterKor",
   "license": "ISC",
   "dependencies": {
     "antd": "^4.16.13",
@@ -16,11 +17,17 @@
     "body-parser": "^1.19.0",
     "concurrently": "^6.3.0",
     "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "debug": "^4.3.2",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
     "mongoose": "^6.0.12",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.14"
+    "nodemon": "^2.0.14",
+    "react-redux": "^7.2.6",
+    "saslprep": "^1.0.3",
+    "supports-color": "^9.0.2"
   }
 }

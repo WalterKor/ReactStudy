@@ -10,21 +10,11 @@ function DayList() {
     function onClick() {
         setCount(count + 1);        
     }    
-
-    function onClick2() {
-        setDays([
-            ...days,
-            {
-                id: Math.random(),
-                day : 1
-            }
-        ]);        
-    }    
-
+       
     /*useEffect 렌더링이 다 끝난 직후*/
     useEffect(()=>{
         console.log("Count Change!!")
-    },[]);
+    });
 
     /*랜더링되고 난 이후 작동*/
 
@@ -37,8 +27,7 @@ function DayList() {
                     </li>
                 ))}            
             </ul>
-            <button onClick={onClick}>{count}</button>              
-            <button onClick={onClick2}>DayChange</button>              
+            <button onClick={onClick}>{count}</button>                          
         </div>
     )
 }
