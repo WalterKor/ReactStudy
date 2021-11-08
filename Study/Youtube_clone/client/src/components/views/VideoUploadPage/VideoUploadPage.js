@@ -27,7 +27,7 @@ function VideoUploadPage() {
     const [Categories, setCategories] = useState("Film & Animation")
     const [FilePath, setFilePath] = useState("")
 
-    const handleChangeTitle = ( event ) => {
+    const handleChangeTitle = ( event ) => {        
         setTitle(event.currentTarget.value)
     }
 
@@ -106,22 +106,26 @@ function VideoUploadPage() {
                         <img src={`http://localhost:5000/${thumbnail}`} alt="haha" />
                     </div>
                 } */}
-            </div>
-
+            </div>                      
             <br /><br />
+
+            {/* Title */}
             <label>Title</label>
             <Input
                  onChange={handleChangeTitle}
                  value={title}
-            />
+            />            
             <br /><br />
+            
+            {/* Description */}
             <label>Description</label>
             <TextArea
                  onChange={handleChangeDecsription}
                  value={Description}
             />
             <br /><br />
-
+            
+            {/* public or private */}
             <select onChange={handleChangeOne}>
                 {Private.map((item, index) => (
                     <option key={index} value={item.value}>{item.label}</option>
@@ -129,6 +133,7 @@ function VideoUploadPage() {
             </select>
             <br /><br />
 
+            {/* Catagory*/}
             <select onChange={handleChangeTwo}>
                 {Catogory.map((item, index) => (
                     <option key={index} value={item.label}>{item.label}</option>
