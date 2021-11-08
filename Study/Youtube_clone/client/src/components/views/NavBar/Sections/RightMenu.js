@@ -18,7 +18,7 @@ function RightMenu(props) {
       }
     });
   };
-
+  //로그인안한사람
   if (user.userData && !user.userData.isAuth) {
     return (
       <Menu mode={props.mode}>
@@ -30,7 +30,7 @@ function RightMenu(props) {
         </Menu.Item>
       </Menu>
     )
-  } else {
+  } else { //로그인한사람
     return (
       <Menu mode={props.mode}>
         <Menu.Item key="upload">

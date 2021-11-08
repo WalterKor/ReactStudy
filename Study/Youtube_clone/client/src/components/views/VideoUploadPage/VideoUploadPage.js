@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
 import { Typography, Button, Form, message, Input, Icon } from 'antd';
 import Dropzone from 'react-dropzone';
 import axios from 'axios';
@@ -18,11 +18,6 @@ const Catogory = [
     { value: 0, label: "Pets & Animals" },
     { value: 0, label: "Sports" },
 ]
-
-
-
-
-
 
 function VideoUploadPage() {
 
@@ -85,7 +80,7 @@ function VideoUploadPage() {
     return (
         <div style={{ maxWidth: '700px', margin: '2rem auto' }}>
         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-            <Title level={2} > Upload Video</Title>
+            <Title level={2} >Upload Video</Title>
         </div>
 
         <Form onSubmit={onSubmit}>
@@ -102,6 +97,7 @@ function VideoUploadPage() {
                             <Icon type="plus" style={{ fontSize: '3rem' }} />
 
                         </div>
+                        
                     )}
                 </Dropzone>
 
