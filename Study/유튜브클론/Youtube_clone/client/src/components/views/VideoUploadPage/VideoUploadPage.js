@@ -55,11 +55,28 @@ function UploadVideoPage() {
             header: { 'content-type': 'multipart/form-data' }
         }
         formData.append("file", files[0])
-        console.log(files)
-
+        
         axios.post('/api/video/uploadfiles', formData, config)
         .then(response=> {
-            console.log('client ')
+            if(response.data.success){
+                console.log(response.data);
+
+                let variable = {
+                    url : response.data.url,
+                    fileName : response.data.fileName
+                };
+
+                axios.post('/api/video/thumbnail', variable)
+                .then(response => {
+                    if(response.data.success){
+
+                    }else{
+                        alert('썸네일 생성에 실패하셨습니다.')
+                    }
+                })
+            }else{
+                alert('비디오 업로드를 실패했습니다.')
+            }
         })
 
     }
@@ -75,7 +92,7 @@ function UploadVideoPage() {
                 <Dropzone 
                     onDrop={onDrop}
                     multiple={false}
-                    maxSize={800000000}>
+                    maxSize={1000000000}>
                     {({ getRootProps, getInputProps }) => (
                         <div style={{ width: '300px', height: '240px', border: '1px solid lightgray', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                             {...getRootProps()}
