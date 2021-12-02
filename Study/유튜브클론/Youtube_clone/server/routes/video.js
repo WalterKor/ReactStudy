@@ -52,8 +52,7 @@ router.post('/thumbnail', (req, res) => {
 
     //비디오정보 가져오기
     ffmpeg.ffprobe(req.body.url, function (err, metadata) {
-        console.dir(metadata);
-        console.log(metadata.format.duration);
+        console.dir(metadata);        
         fileDuration = metadata.format.duration;    
     });
 
