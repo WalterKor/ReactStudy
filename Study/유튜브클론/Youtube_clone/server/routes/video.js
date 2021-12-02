@@ -94,14 +94,14 @@ router.post('/uploadVideo', (req, res)=>{
     const video = new Video(req.body);
     video.save((err, doc)=>{
         if(err) return res.json({success: false, err})
-        res.status(200).json({success: true})
+        res.status(200).json({success: true, videos})
     });
 });
 
 router.get('/getVideos', (req, res)=>{
     //비디오를 DB에서 가져와서 클라이언트에 보낸다.
     Video.find()
-        .populate('writer')
+        .populate('writer') /*witer의 모든 정보를 가져온다.*/
         .exec((err, videos)=>{
             if(err) return res.status(400).send(err);
             res.status(200).json({success:true, videos})
