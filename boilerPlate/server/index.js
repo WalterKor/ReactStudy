@@ -9,7 +9,7 @@ const cookieParser = require('cookie-parser');
 
 
 const app = express();
-const port = 3000;
+const port = 5000;
 
 const config = require('./config/key');
 
@@ -88,6 +88,11 @@ app.get('/api/users/logout', auth , (req, res)=>{
         })
     })
 })
+
+app.get('/api/hello', (req, res)=>{
+    res.send("안녕하세요dd")
+});
+
 
 
 app.listen(port, ()=>{
