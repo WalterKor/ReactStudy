@@ -1,9 +1,62 @@
-import React from 'react'
+import React, {useState} from 'react';
+import {useDispatch} from 'react-redux';
+import { loginUser } from '../../../_actions/user_action';
+import {withRouter} from 'react-router-dom'
 
-function Loginpage() {
+
+function Loginpage(props) {
+
+  const dispatch = useDispatch();
+
+  const [Email, setEmail] = useState("");
+  const [Password, setPassword] = useState("");
+
+  const onEailHandler = (event)=>{
+    setEmail(event.currentTarget.value);
+  }
+
+  const onPasswordHandler = (event) =>{
+    setPassword(event.currentTarget.value);
+  }
+
+  const onSubmitHandler = (event)=>{
+
+    event.preventDefault();
+  
+    let body = {
+      email : Email,
+      password : Password
+    }
+
+    dispatch(loginUser(body)).then(response =>{
+        if(response.payload.loginSuccess){
+            props.history.push('/')
+        }else{
+          alert('Error');
+        }
+    })
+  }
+
+
   return (
-    <div>Loginpage</div>
+
+    <div style={{
+      display: 'flex', justifyContent : 'center', alignItems : 'center',
+      width : '100%', height : '100vh'
+    }}>
+      <form style={{ display: 'flex', flexDirection : 'column'}} onSubmit={onSubmitHandler}>
+          <label>Email</label>
+          <input type= "email" value={Email} onChange={onEailHandler}/>
+
+          <label>Password</label>
+          <input type= "password" value={Password} onChange={onPasswordHandler}/>
+
+          <br/>
+          <button>login</button>
+
+      </form>
+    </div>
   )
 }
 
-export default Loginpage
+export default withRouter(Loginpage)
